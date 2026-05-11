@@ -1,6 +1,6 @@
 # svg-tidy
 
-[![npm version](https://img.shields.io/npm/v/svg-tidy.svg)](https://www.npmjs.com/package/svg-tidy)
+[![npm version](https://img.shields.io/npm/v/@marcovega/svg-tidy.svg)](https://www.npmjs.com/package/@marcovega/svg-tidy)
 
 A tiny CLI that optimizes every `.svg` file in a directory using
 [SVGO](https://github.com/svg/svgo) with the same plugin settings as the
@@ -19,13 +19,13 @@ No install needed — just run it with `npx`:
 
 ```bash
 cd path/to/your/svgs
-npx svg-tidy
+npx @marcovega/svg-tidy
 ```
 
-Or install globally:
+Or install globally (the binary is `svg-tidy`):
 
 ```bash
-npm install -g svg-tidy
+npm install -g @marcovega/svg-tidy
 svg-tidy
 ```
 
@@ -50,11 +50,11 @@ Options:
 Examples:
 
 ```bash
-npx svg-tidy                       # optimize every .svg in this dir
-npx svg-tidy -r                    # ...recursively
-npx svg-tidy ./icons logo.svg      # specific paths
-npx svg-tidy -n                    # preview savings, don't write
-npx svg-tidy --init                # just create .svgtidy.json and stop
+npx @marcovega/svg-tidy                  # optimize every .svg in this dir
+npx @marcovega/svg-tidy -r                # ...recursively
+npx @marcovega/svg-tidy ./icons logo.svg  # specific paths
+npx @marcovega/svg-tidy -n                # preview savings, don't write
+npx @marcovega/svg-tidy --init            # just create .svgtidy.json and stop
 ```
 
 Each file is overwritten only when SVGO actually changes its contents.
@@ -114,8 +114,8 @@ old and new names are accepted in `.svgtidy.json`:
 2. Runs it from your global `PATH`.
 3. Downloads it from the npm registry to a temp cache and runs it.
 
-Because `svg-tidy` is published to npm, option 3 just works — no `npm link`
-required for end users.
+Because `@marcovega/svg-tidy` is published to npm, option 3 just works — no
+`npm link` required for end users.
 
 ## Local development
 
@@ -126,7 +126,7 @@ npm install
 npm link            # makes `svg-tidy` available globally for testing
 ```
 
-To remove the global symlink later: `npm unlink -g svg-tidy`.
+To remove the global symlink later: `npm unlink -g @marcovega/svg-tidy`.
 
 ## Updating SVGO
 
