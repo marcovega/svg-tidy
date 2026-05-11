@@ -1,0 +1,44 @@
+{
+  "name": "svg-tidy",
+  "version": "0.2.0",
+  "description": "Optimize SVG icons in a directory using SVGO. Writes a .svgtidy.json config on first run so you can customize and commit settings per project.",
+  "type": "module",
+  "bin": {
+    "svg-tidy": "bin/svg-tidy.js"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18.3.0"
+  },
+  "scripts": {
+    "start": "node bin/svg-tidy.js"
+  },
+  "dependencies": {
+    "svgo": "^4.0.1"
+  },
+  "keywords": [
+    "svg",
+    "svgo",
+    "svgomg",
+    "optimize",
+    "minify",
+    "icons",
+    "cli",
+    "npx"
+  ],
+  "author": "Marco Vega",
+  "license": "MIT",
+  "homepage": "https://github.com/marcovega/svg-tidy#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcovega/svg-tidy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/marcovega/svg-tidy/issues"
+  }
+}
