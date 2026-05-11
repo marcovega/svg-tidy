@@ -11,6 +11,17 @@ import {
   toSvgoOptions,
 } from '../lib/config.js';
 
+// `npx` / `npm exec` chdir into the nearest enclosing project root before
+// invoking the bin, which would make us scan the wrong directory. npm leaves
+// the user's original working directory in INIT_CWD, so restore it.
+if (process.env.INIT_CWD && process.env.INIT_CWD !== process.cwd()) {
+  try {
+    process.chdir(process.env.INIT_CWD);
+  } catch {
+    // INIT_CWD is unreachable; fall through with whatever cwd we have.
+  }
+}
+
 const HELP = `svg-tidy - optimize SVG files in place using SVGO
 
 Usage:
